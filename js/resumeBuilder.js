@@ -89,9 +89,10 @@ var bio = {
 
         // This solution is two lines
         var formattedHTMLName = HTMLheaderName.replace("%data%", bio.name);
-        $("#header").append(formattedHTMLName);
+
         // now i use on line solution
-        $("#header").append(HTMLheaderRole.replace("%data%", bio.role));
+        $("#header").prepend(HTMLheaderRole.replace("%data%", bio.role));
+        $("#header").prepend(formattedHTMLName);
         // also for phone
         $("#topContacts").append(HTMLmobile.replace("%data%", bio.contacts.phone));
         // @mail
