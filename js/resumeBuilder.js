@@ -34,26 +34,22 @@ var work = {
             var formattedDescription = HTMLworkDescription.replace("%data%", work.jobs[index].description);
             var formattedExperience = formattedEmployer + formattedTitle + formattedDates + formattedLocation + formattedDescription;
             $(".work-entry:last").append(formattedExperience);
-
-            //console.log(work.jobs[index]);
         }
     }
 };
 
 var projects = {
     "projects": [{
-            "title": "Teamcenter Application Test",
-            "dates": "2016",
-            "description": "",
-            "images": ["images/teamcenter.jpg"]
-        },
-        {
-            "title": "Numerical algorithm tool for railways alignment",
-            "dates": "2014-2016",
-            "description": "",
-            "images": ["images/CAD.jpg", "images/railway.jpg"]
-        }
-    ],
+        "title": "Teamcenter Application Test",
+        "dates": "2016",
+        "description": "",
+        "images": ["images/teamcenter.jpg"]
+    }, {
+        "title": "Numerical algorithm tool for railways alignment",
+        "dates": "2014-2016",
+        "description": "",
+        "images": ["images/CAD.jpg", "images/railway.jpg"]
+    }],
     "display": function() {
         projects.projects.forEach(function(project) {
             $("#projects").append(HTMLprojectStart);
@@ -100,7 +96,7 @@ var bio = {
         $("#topContacts").append(HTMLgithub.replace("%data%", bio.contacts.github));
         $("#topContacts").append(HTMLtwitter.replace("%data%", bio.contacts.twitter));
         $("#topContacts").append(HTMLlocation.replace("%data%", bio.contacts.location));
-        $("#topContacts").append(HTMLcontactGeneric.replace("%data%", bio.contacts.xing).replace("%contact%","xing"));
+        $("#topContacts").append(HTMLcontactGeneric.replace("%data%", bio.contacts.xing).replace("%contact%", "xing"));
 
         $("#footerContacts").append(HTMLmobile.replace("%data%", bio.contacts.phone));
         // @mail
@@ -108,7 +104,7 @@ var bio = {
         $("#footerContacts").append(HTMLgithub.replace("%data%", bio.contacts.github));
         $("#footerContacts").append(HTMLtwitter.replace("%data%", bio.contacts.twitter));
         $("#footerContacts").append(HTMLlocation.replace("%data%", bio.contacts.location));
-        $("#footerContacts").append(HTMLcontactGeneric.replace("%data%", bio.contacts.xing).replace("%contact%","xing"));
+        $("#footerContacts").append(HTMLcontactGeneric.replace("%data%", bio.contacts.xing).replace("%contact%", "xing"));
 
 
         $("#header").append(HTMLbioPic.replace("%data%", bio.biopic));
@@ -127,27 +123,24 @@ var bio = {
 
 var education = {
     "schools": [{
-            "name": "Gymnasium Gonsenheim",
-            "dates": "1998-2005",
-            "degree": "Abitur",
-            "location": "Mainz",
-            "major": "Math, English"
-        },
-        {
-            "name": "Technical University Darmstadt",
-            "dates": "2005-2009",
-            "degree": "B.Sc. Computational Eningeering",
-            "location": "Darmstadt",
-            "major": "Computer Science for Construction Eningeering"
-        },
-        {
-            "name": "Technical University Darmstadt",
-            "dates": "2009-2011",
-            "degree": "M.Sc. Computational Eningeering",
-            "location": "Darmstadt",
-            "major": "Computer Science for Construction Eningeering"
-        }
-    ],
+        "name": "Gymnasium Gonsenheim",
+        "dates": "1998-2005",
+        "degree": "Abitur",
+        "location": "Mainz",
+        "major": "Math, English"
+    }, {
+        "name": "Technical University Darmstadt",
+        "dates": "2005-2009",
+        "degree": "B.Sc. Computational Eningeering",
+        "location": "Darmstadt",
+        "major": "Computer Science for Construction Eningeering"
+    }, {
+        "name": "Technical University Darmstadt",
+        "dates": "2009-2011",
+        "degree": "M.Sc. Computational Eningeering",
+        "location": "Darmstadt",
+        "major": "Computer Science for Construction Eningeering"
+    }],
 
     "onlineCourses": [{
         "title": "Nanodegree Webdeveloper candidate",
@@ -155,29 +148,28 @@ var education = {
         "dates": "2017",
         "url": "https://www.udacity.com/"
     }],
-    "display" : function () {
+    "display": function() {
         // the start
         $("#education").append(HTMLschoolStart);
         // now the list items
         for (var schoolIndex = 0; schoolIndex < education.schools.length; schoolIndex++) {
-                var formattedEducation = HTMLschoolName.replace("%data%",education.schools[schoolIndex].name);
-                formattedEducation += HTMLschoolDegree.replace("%data%", education.schools[schoolIndex].degree);
-                formattedEducation += HTMLschoolDates.replace("%data%", education.schools[schoolIndex].dates);
-                formattedEducation += HTMLschoolLocation.replace("%data%", education.schools[schoolIndex].location);
-                formattedEducation += HTMLschoolMajor.replace("%data%", education.schools[schoolIndex].major);
-                $("#education").append(formattedEducation);
-
-                // $("#education").append(HTMLschoolMajor.replace("%data%", no idea what to put here));
-                //console.log(formattedHTMLskill);
+            var formattedEducation = HTMLschoolName.replace("%data%", education.schools[schoolIndex].name);
+            formattedEducation += HTMLschoolDegree.replace("%data%", education.schools[schoolIndex].degree);
+            formattedEducation += HTMLschoolDates.replace("%data%", education.schools[schoolIndex].dates);
+            formattedEducation += HTMLschoolLocation.replace("%data%", education.schools[schoolIndex].location);
+            formattedEducation += HTMLschoolMajor.replace("%data%", education.schools[schoolIndex].major);
+            $("#education").append(formattedEducation);
+            //console.log(formattedEducation);
         }
         $("#education").append(HTMLonlineClasses);
         for (var onlineCoursesIndex = 0; onlineCoursesIndex < education.onlineCourses.length; onlineCoursesIndex++) {
-            var formattedPnlineSchool =  HTMLonlineTitle.replace("%data%", education.onlineCourses[onlineCoursesIndex].title);
+            var formattedPnlineSchool = HTMLonlineTitle.replace("%data%", education.onlineCourses[onlineCoursesIndex].title);
             formattedPnlineSchool += HTMLonlineSchool.replace("%data%", education.onlineCourses[onlineCoursesIndex].school);
             formattedPnlineSchool += HTMLonlineSchool.replace("%data%", education.onlineCourses[onlineCoursesIndex].school)
             formattedPnlineSchool += HTMLonlineDates.replace("%data%", education.onlineCourses[onlineCoursesIndex].dates)
             formattedPnlineSchool += HTMLonlineURL.replace("%data%", education.onlineCourses[onlineCoursesIndex].url);
             $("#education").append(formattedPnlineSchool);
+            //console.log(formattedPnlineSchool);
         }
     }
 };
