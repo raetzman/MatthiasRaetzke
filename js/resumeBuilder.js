@@ -45,13 +45,13 @@ var projects = {
             "title": "Teamcenter Application Test",
             "dates": "2016",
             "description": "",
-            "images": ["images/fry.jpg"]
+            "images": ["images/teamcenter.jpg"]
         },
         {
             "title": "Numerical algorithm tool for railways alignment",
             "dates": "2014-2016",
             "description": "",
-            "images": ["images/fry.jpg", "images/fry.jpg"]
+            "images": ["images/CAD.jpg", "images/railway.jpg"]
         }
     ],
     "display": function() {
@@ -75,7 +75,7 @@ var bio = {
     "name": "Matthias Rätzke",
     "role": "BIM Engineer, Software Developer & Web Developer",
     "welcomeMessage": "Let me please introduce to myself",
-    "biopic": "images/fry.jpg",
+    "biopic": "images/Rätzke_Matthias_120x160.jpg",
     "contacts": {
         "mail": "raetzman@gmx.de",
         "phone": "(+49/0)-711 7883 8939",
@@ -101,6 +101,16 @@ var bio = {
         $("#topContacts").append(HTMLtwitter.replace("%data%", bio.contacts.twitter));
         $("#topContacts").append(HTMLlocation.replace("%data%", bio.contacts.location));
         $("#topContacts").append(HTMLcontactGeneric.replace("%data%", bio.contacts.xing).replace("%contact%","xing"));
+
+        $("#footerContacts").append(HTMLmobile.replace("%data%", bio.contacts.phone));
+        // @mail
+        $("#footerContacts").append(HTMLemail.replace("%data%", bio.contacts.mail));
+        $("#footerContacts").append(HTMLgithub.replace("%data%", bio.contacts.github));
+        $("#footerContacts").append(HTMLtwitter.replace("%data%", bio.contacts.twitter));
+        $("#footerContacts").append(HTMLlocation.replace("%data%", bio.contacts.location));
+        $("#footerContacts").append(HTMLcontactGeneric.replace("%data%", bio.contacts.xing).replace("%contact%","xing"));
+
+
         $("#header").append(HTMLbioPic.replace("%data%", bio.biopic));
         $("#header").append(HTMLwelcomeMsg.replace("%data%", bio.welcomeMessage));
         if (bio.skills.length > 0) {
