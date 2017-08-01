@@ -42,12 +42,12 @@ var projects = {
     "projects": [{
         "title": "Teamcenter Application Test",
         "dates": "2016",
-        "description": "",
+        "description": "A software plattform test",
         "images": ["images/teamcenter.jpg"]
     }, {
         "title": "Numerical algorithm tool for railways alignment",
         "dates": "2014-2016",
-        "description": "",
+        "description": "Creating 3D objects along a given path with an infinite information layer in one of germanies biggest BIM projects",
         "images": ["images/CAD.jpg", "images/railway.jpg"]
     }],
     "display": function() {
@@ -73,8 +73,8 @@ var bio = {
     "welcomeMessage": "Let me please introduce to myself",
     "biopic": "images/Rätzke_Matthias_120x160.jpg",
     "contacts": {
-        "mail": "raetzman@gmx.de",
-        "phone": "(+49/0)-711 7883 8939",
+        "email": "raetzman@gmx.de",
+        "mobile": "(+49/0)-711 7883 8939",
         "github": "raetzman",
         "twitter": "raetzman85",
         "location": "Stuttgart",
@@ -90,17 +90,17 @@ var bio = {
         $("#header").prepend(HTMLheaderRole.replace("%data%", bio.role));
         $("#header").prepend(formattedHTMLName);
         // also for phone
-        $("#topContacts").append(HTMLmobile.replace("%data%", bio.contacts.phone));
+        $("#topContacts").append(HTMLmobile.replace("%data%", bio.contacts.mobile));
         // @mail
-        $("#topContacts").append(HTMLemail.replace("%data%", bio.contacts.mail));
+        $("#topContacts").append(HTMLemail.replace("%data%", bio.contacts.email));
         $("#topContacts").append(HTMLgithub.replace("%data%", bio.contacts.github));
         $("#topContacts").append(HTMLtwitter.replace("%data%", bio.contacts.twitter));
         $("#topContacts").append(HTMLlocation.replace("%data%", bio.contacts.location));
         $("#topContacts").append(HTMLcontactGeneric.replace("%data%", bio.contacts.xing).replace("%contact%", "xing"));
 
-        $("#footerContacts").append(HTMLmobile.replace("%data%", bio.contacts.phone));
+        $("#footerContacts").append(HTMLmobile.replace("%data%", bio.contacts.mobile));
         // @mail
-        $("#footerContacts").append(HTMLemail.replace("%data%", bio.contacts.mail));
+        $("#footerContacts").append(HTMLemail.replace("%data%", bio.contacts.email));
         $("#footerContacts").append(HTMLgithub.replace("%data%", bio.contacts.github));
         $("#footerContacts").append(HTMLtwitter.replace("%data%", bio.contacts.twitter));
         $("#footerContacts").append(HTMLlocation.replace("%data%", bio.contacts.location));
@@ -133,13 +133,13 @@ var education = {
         "dates": "2005-2009",
         "degree": "B.Sc. Computational Eningeering",
         "location": "Darmstadt",
-        "major": "Computer Science for Construction Eningeering"
+        "majors": "Computer Science for Construction Eningeering"
     }, {
         "name": "Technical University Darmstadt",
         "dates": "2009-2011",
         "degree": "M.Sc. Computational Eningeering",
         "location": "Darmstadt",
-        "major": "Computer Science for Construction Eningeering"
+        "majors": "Computer Science for Construction Eningeering"
     }],
 
     "onlineCourses": [{
@@ -157,7 +157,7 @@ var education = {
             formattedEducation += HTMLschoolDegree.replace("%data%", education.schools[schoolIndex].degree);
             formattedEducation += HTMLschoolDates.replace("%data%", education.schools[schoolIndex].dates);
             formattedEducation += HTMLschoolLocation.replace("%data%", education.schools[schoolIndex].location);
-            formattedEducation += HTMLschoolMajor.replace("%data%", education.schools[schoolIndex].major);
+            formattedEducation += HTMLschoolMajor.replace("%data%", education.schools[schoolIndex].majors);
             $("#education").append(formattedEducation);
             //console.log(formattedEducation);
         }
