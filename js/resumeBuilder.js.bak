@@ -157,7 +157,7 @@ var education = {
             formattedEducation += HTMLschoolDegree.replace("%data%", education.schools[schoolIndex].degree);
             formattedEducation += HTMLschoolDates.replace("%data%", education.schools[schoolIndex].dates);
             formattedEducation += HTMLschoolLocation.replace("%data%", education.schools[schoolIndex].location);
-			// here a for loop is required indeed!
+			
 			for (var majorsIndex = 0; majorsIndex < education.schools[schoolIndex].majors.length; majorsIndex++) {                
 				formattedEducation += HTMLschoolMajor.replace("%data%", education.schools[schoolIndex].majors[majorsIndex]);				
             }
