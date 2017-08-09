@@ -167,13 +167,12 @@ var education = {
         }
         $("#education").append(HTMLonlineClasses);
         for (var onlineCoursesIndex = 0; onlineCoursesIndex < education.onlineCourses.length; onlineCoursesIndex++) {
-            var formattedPnlineSchool = HTMLonlineTitle.replace("%data%", education.onlineCourses[onlineCoursesIndex].title);
-            formattedPnlineSchool += HTMLonlineSchool.replace("%data%", education.onlineCourses[onlineCoursesIndex].school);
-            formattedPnlineSchool += HTMLonlineSchool.replace("%data%", education.onlineCourses[onlineCoursesIndex].school);
-            formattedPnlineSchool += HTMLonlineDates.replace("%data%", education.onlineCourses[onlineCoursesIndex].dates);
-            formattedPnlineSchool += HTMLonlineURL.replace("%data%", education.onlineCourses[onlineCoursesIndex].url);
-            $("#education").append(formattedPnlineSchool);
-            //console.log(formattedPnlineSchool);
+            var formattedOnlineSchool = HTMLonlineTitle.replace("%data%", education.onlineCourses[onlineCoursesIndex].title);
+            formattedOnlineSchool += HTMLonlineSchool.replace("%data%", education.onlineCourses[onlineCoursesIndex].school);
+            formattedOnlineSchool += HTMLonlineDates.replace("%data%", education.onlineCourses[onlineCoursesIndex].dates);
+            formattedOnlineSchool += HTMLonlineURL.replace("%data%", education.onlineCourses[onlineCoursesIndex].url);
+            $("#education").append(formattedOnlineSchool);
+            //console.log(formattedOnlineSchool);
         }
     }
 };
